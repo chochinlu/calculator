@@ -23,23 +23,29 @@ const CalEle = props => (
 
 const TotalEle = props => (
   <Ele width={100} bg={'bg-lightest-blue'}>
-    <h1 className="f1 tr">{props.children}</h1>
+    <p className="f1 tr">{props.children}</p>
   </Ele>
 );
 
 const App = () => {
   const [numA, setNumA] = useState(0);
+  const [isFloat, setIsFloat] = useState(false);
 
   const clickNum = num => {
     if (numA === 0) {
       setNumA(num);
+    } else {
+      if (isFloat) {
+        //TODO: check numA is float  3.2 -> 3.22 -> 3.233
+      } else {
+        setNumA(`${numA * 10 + num}`);
+      }
     }
-
-    setNumA(`${numA * 10 + num}`);
   };
 
   const clearNum = num => {
     setNumA(0);
+    setIsFloat(false);
   };
 
   const switchNegativePositive = () => {
@@ -48,6 +54,14 @@ const App = () => {
 
   const makeNumPercent = () => {
     setNumA(numA * 0.01);
+  };
+
+  const setFloat = () => {
+    if (isFloat) {
+      return;
+    }
+
+    setIsFloat(!isFloat);
   };
 
   return (
@@ -89,7 +103,7 @@ const App = () => {
         <Ele width={50} onClick={() => clickNum(0)}>
           0
         </Ele>
-        <Ele>.</Ele>
+        <Ele onClick={() => setFloat()}>.</Ele>
         <CalEle>=</CalEle>
       </Row>
     </div>
