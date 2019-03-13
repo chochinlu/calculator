@@ -2,7 +2,7 @@
   "name": "calculator",
   "version": "0.1.0",
   "license": "MIT",
-  "homepage": "http://chochinlu.github.io/calculator",
+  "homepage": "https://chochinlu.github.io/calculator/",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.8.4",
