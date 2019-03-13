@@ -31,8 +31,8 @@ class App extends Component {
           <TotalEle>0</TotalEle>
         </Row>
         <Row>
-          {['AC', '+/-', '%', '/'].map(ele => (
-            <CalEle>{ele}</CalEle>
+          {['AC', '+/-', '%', '/'].map((ele, index) => (
+            <CalEle key={`cal-${index}`}>{ele}</CalEle>
           ))}
         </Row>
         <Row>
