@@ -48,7 +48,7 @@ const App = () => {
     if (!operation || !numB) return;
 
     if (operation === ops.add) {
-      setNumA(numA + numB);
+      setNumA(parseFloat(numA) + parseFloat(numB));
     }
 
     if (operation === ops.minus) {
@@ -76,7 +76,7 @@ const App = () => {
   };
 
   const setNum = () => {
-    return numA === 0 && !numB
+    return !operation && !numB
       ? { target: numA, handle: setNumA }
       : { target: numB, handle: setNumB };
   };
@@ -103,6 +103,8 @@ const App = () => {
 
   const clearNum = num => {
     setNumA(0);
+    setNumB(null);
+    setOperation(null);
     setIsFloat(false);
   };
 
