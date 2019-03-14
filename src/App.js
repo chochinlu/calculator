@@ -36,7 +36,13 @@ const App = () => {
       setNumA(num);
     } else {
       if (isFloat) {
-        //TODO: check numA is float  3.2 -> 3.22 -> 3.233
+        const hasDot = numA
+          .toString()
+          .split('')
+          .includes('.');
+        hasDot
+          ? setNumA(parseFloat(`${numA}${num}`))
+          : setNumA(parseFloat(`${numA}.${num}`));
       } else {
         setNumA(`${numA * 10 + num}`);
       }
