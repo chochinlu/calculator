@@ -72,7 +72,6 @@ const App = () => {
   };
 
   const setNum = () => {
-    console.log({ numA, numB });
     return numA === 0 && !numB
       ? { target: numA, handle: setNumA }
       : { target: numB, handle: setNumB };
@@ -80,7 +79,6 @@ const App = () => {
 
   const clickNum = num => {
     const { target, handle } = setNum();
-    console.log({ target, handle });
 
     if (target === 0 || !target) {
       handle(num);
