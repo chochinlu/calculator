@@ -6,7 +6,7 @@ const Row = props => {
 };
 
 const Ele = ({ children, width = '25', bg = 'bg-washed-green', onClick }) => {
-  const style = `w-${width} ${bg} outline pa3  tc`;
+  const style = `w-${width} ${bg} pa3 tc helvetica black-70 b--solid b--white-90`;
 
   return (
     <div className={style} onClick={onClick}>
@@ -17,15 +17,19 @@ const Ele = ({ children, width = '25', bg = 'bg-washed-green', onClick }) => {
 
 const CalEle = props => (
   <Ele bg={'bg-yellow'} onClick={props.onClick}>
-    <strong>{props.children}</strong>
+    {props.children}
   </Ele>
 );
 
-const TotalEle = props => (
-  <Ele width={100} bg={'bg-lightest-blue'}>
-    <p className="f1 tr">{props.children}</p>
-  </Ele>
-);
+const TotalEle = ({ children, onClick }) => {
+  const style = `w-100 pr3 bg-lightest-blue tr helvetica black-70 b--solid b--white-90`;
+  return (
+    <div className={style} onClick={onClick}>
+      <h1 style={{ fontSize: '5em' }}>{children}</h1>
+    </div>
+  );
+}
+
 
 const ops = {
   add: 'ADD',
