@@ -22,7 +22,7 @@ const App = () => {
     if (!operation || !numB) return;
 
     if (operation === ops.add) {
-      setNumA(parseFloat(numA) + parseFloat(numB));
+      setNumA(numA + numB);
     }
 
     if (operation === ops.minus) {
