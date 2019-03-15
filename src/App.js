@@ -113,11 +113,13 @@ const App = () => {
   };
 
   const switchNegativePositive = () => {
-    setNumA(-numA);
+    const { target, handle } = setNum();
+    handle(-target);
   };
 
   const makeNumPercent = () => {
-    setNumA(numA * 0.01);
+    const { target, handle } = setNum();
+    handle(target * 0.01);
   };
 
   const setFloat = () => {
