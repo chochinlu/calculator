@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './App.css';
 
 const Row = props => {
   const style = 'h-25 flex justify-center';
@@ -6,7 +7,7 @@ const Row = props => {
 };
 
 const Ele = ({ children, width = '25', bg = 'bg-washed-green', onClick }) => {
-  const style = `w-${width} ${bg} pa3 tc helvetica black-70 b--solid b--white-90`;
+  const style = `w-${width} ${bg} pa3 tc helvetica black-70 b--solid b--white-90 pointer `;
 
   return (
     <div className={style} onClick={onClick}>
@@ -25,7 +26,7 @@ const TotalEle = ({ children, onClick }) => {
   const style = `w-100 pr3 bg-lightest-blue tr helvetica black-70 b--solid b--white-90`;
   return (
     <div className={style} onClick={onClick}>
-      <h1 style={{ fontSize: '5em' }}>{children}</h1>
+      <h1 className='f1-l f1-m'>{children}</h1>
     </div>
   );
 }
