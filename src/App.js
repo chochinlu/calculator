@@ -85,6 +85,7 @@ const App = () => {
   const clickNum = num => {
     const { target, handle } = setNum();
 
+
     if (target === 0 || !target) {
       handle(num);
     } else {
@@ -97,7 +98,9 @@ const App = () => {
           ? handle(parseFloat(`${target}${num}`))
           : handle(parseFloat(`${target}.${num}`));
       } else {
-        handle(target * 10 + num);
+        Math.sign(target) < 0
+          ? handle(target * 10 - num)
+          : handle(target * 10 + num);
       }
     }
   };
