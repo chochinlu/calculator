@@ -96,7 +96,7 @@ const App = () => {
           ? handle(parseFloat(`${target}${num}`))
           : handle(parseFloat(`${target}.${num}`));
       } else {
-        handle(`${target * 10 + num}`);
+        handle(target * 10 + num);
       }
     }
   };
