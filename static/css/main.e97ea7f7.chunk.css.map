@@ -1,0 +1,1 @@
+{"version":3,"sources":["App.css"],"names":[],"mappings":"AAAA,wDACE,MACI,cACJ,CACF,CAEA,mCACE,MACI,cACJ,CACF","file":"main.e97ea7f7.chunk.css","sourcesContent":["@media screen and (min-width: 30em) and (max-width: 60em) {\n  .f1-m {\n      font-size: 3rem;\n  }\n}\n\n@media screen and (min-width: 60em) {\n  .f1-l {\n      font-size: 4rem;\n  }\n}"]}
